@@ -33,13 +33,12 @@ class LinkedList
   end
 
   def size
-    return 0 if @head.nil?
-
+    count = 0
     node = @head
-    count = 1
-    until node.next_node.nil?
-      node = node.next_node
+
+    until node.nil?
       count += 1
+      node = node.next_node
     end
     count
   end
